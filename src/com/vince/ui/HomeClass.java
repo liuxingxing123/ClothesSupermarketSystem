@@ -10,6 +10,7 @@ import com.vince.service.impl.OrderServiceImpl;
 import com.vince.utils.BussinessException;
 import com.vince.utils.ConsoleTable;
 import com.vince.utils.DateUtils;
+import com.vince.utils.OrderIO;
 
 import java.util.Date;
 import java.util.List;
@@ -25,6 +26,9 @@ public class HomeClass extends BaseClass {
     public void show(){
         ShowProducts();
         println("welcome:"+currUser.getUsername());
+        menu();
+    }
+    private void menu(){
         boolean flag = true;
         while(flag){
             println(getString("home.function"));
@@ -32,7 +36,7 @@ public class HomeClass extends BaseClass {
             String select = input.nextLine();
             switch(select){
                 case "1"://查询全部订单
-                    findList();
+                    findOrderList();
                     flag = false;
                     break;
                 case "2"://查找订单
@@ -47,6 +51,10 @@ public class HomeClass extends BaseClass {
                         println(e.getMessage());
                     }
                     break;
+                case "4"://显示商品
+                    show();
+                    flag = false;
+                    break;
                 case "0"://退出
                     flag = false;
                     System.exit(0);
@@ -57,7 +65,6 @@ public class HomeClass extends BaseClass {
             }
         }
     }
-
     //购买商品
     private void buyProducts() throws BussinessException {
         //生成订单
@@ -110,11 +117,55 @@ public class HomeClass extends BaseClass {
     }
 
     private void findOrderById() {
-        println("查找订单");
+        println(getString("product.order.input.oid"));
+        String oid = input.nextLine();
+        Order order = orderService.findById(Integer.parseInt(oid));
+        if(order!=null){
+            showOrder(order);
+        }else{
+            println(getString("product.order.error"));
+        }
+        menu();
+
+
     }
 
-    private void findList() {
-        println("查询全部订单");
+    private void findOrderList() {
+        List<Order> list = orderService.list();
+        for(Order o:list){
+            showOrder(o);
+        }
+        menu();
+    }
+
+    private void showOrder(Order o) {
+        print(getString("product.order.oid")+o.getOrderId());
+        print("\t"+getString("product.order.createDate")+o.getCreateDate());
+        println("\t"+getString("product.order.sum")+o.getSum());
+        ConsoleTable t = new ConsoleTable(9,true);
+        t.appendRow();
+        t.appendColum("itemId")
+                .appendColum("brand")
+                .appendColum("style")
+                .appendColum("color")
+                .appendColum("size")
+                .appendColum("price")
+                .appendColum("description")
+                .appendColum("shoppingNum")
+                .appendColum("sum");
+        for(OrderItem c:o.getOrderItemList()){
+            t.appendRow();
+            t.appendColum(c.getItemId())
+                    .appendColum(c.getClothes().getBrand())
+                    .appendColum(c.getClothes().getStyle())
+                    .appendColum(c.getClothes().getColor())
+                    .appendColum(c.getClothes().getSize())
+                    .appendColum(c.getClothes().getPrice())
+                    .appendColum(c.getClothes().getDescription())
+                    .appendColum(c.getShoppingNum())
+                    .appendColum(c.getSum());
+        }
+        println(t.toString());
     }
 
     private void ShowProducts() {

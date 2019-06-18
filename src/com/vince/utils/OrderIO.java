@@ -16,9 +16,11 @@ public class OrderIO {
     private static final String ORDER_FILE = "order.obj";
     public void add(Order order) throws  BussinessException{
         orders.add(order);
+        writeOrders();
     }
 
     public List<Order> list() throws  BussinessException{
+        readOrders();
         return orders;
     }
 

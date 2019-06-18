@@ -1,11 +1,13 @@
 package com.vince.bean;
 
+import java.io.Serializable;
+
 /**
  * 每件衣服的明细
  * @author liuxingxing
  * @date 2019-06-17 20:31
  */
-public class OrderItem {
+public class OrderItem implements Serializable {
     private int itemId;
     private Clothes clothes;//商品
     private int shoppingNum;
