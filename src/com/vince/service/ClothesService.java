@@ -7,4 +7,6 @@ import java.util.List;
 
 public interface ClothesService {
     public List<Clothes> list() throws BussinessException;
+    public Clothes findById(String cid) throws  BussinessException;
+    public void update() throws  BussinessException;
 }
