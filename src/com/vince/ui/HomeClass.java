@@ -106,7 +106,7 @@ public class HomeClass extends BaseClass {
         order.setOrderId(orderService.list().size()+1);
         orderService.buyProduct(order);
         clothesService.update();
-        ShowProducts();
+        show();
     }
 
     private void findOrderById() {
