@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<list>
+    <clothes id="A001">
+        <brand>VEROMODA</brand>
+        <style>连衣裙</style>
+        <color>白色</color>
+        <size>S</size>
+        <num>4</num>
+        <price>274.0</price>
+        <description>夏季五分袖连衣裙</description>
+    </clothes>
+    <clothes id="A002">
+        <brand>GAP</brand>
+        <style>连衣裙</style>
+        <color>黑白色</color>
+        <size>S</size>
+        <num>19</num>
+        <price>164.0</price>
+        <description>系带无袖宽松夏季柔软碎花背心裙</description>
+    </clothes>
+    <clothes id="A003">
+        <brand>丹慕妮尔</brand>
+        <style>连衣裙</style>
+        <color>淡紫色</color>
+        <size>M</size>
+        <num>34</num>
+        <price>338.80</price>
+        <description>丹慕妮尔阔太太双层雪纺连衣裙女2019夏季新款贵夫人气质优雅裙子</description>
+    </clothes>
+    <clothes id="A004">
+    <brand>贝芙伦</brand>
+    <style>真丝连衣裙</style>
+    <color>粉色</color>
+    <size>L</size>
+    <num>45</num>
+    <price>618.00</price>
+    <description>真丝连衣裙2019春夏新款显瘦大牌女装气质重磅桑蚕丝白色长裙裙子</description>
+</clothes>
+    <clothes id="A005">
+    <brand>yiner</brand>
+    <style>夏季新款衬衫式印花真丝连衣裙</style>
+    <color>黑白色</color>
+    <size>XL</size>
+    <num>23</num>
+    <price>3312.00</price>
+    <description>影儿YINER音儿女装2019夏季新款衬衫式印花真丝连衣裙8C39205090</description>
+</clothes>
+    <clothes id="A006">
+    <brand>优衣库</brand>
+    <style>吊带连衣裙</style>
+    <color>红色</color>
+    <size>S</size>
+    <num>56</num>
+    <price>249.00</price>
+    <description>女装 乔其纱吊带连衣裙 417143 优衣库</description>
+</clothes>
+    <clothes id="A007">
+        <brand>cs女装</brand>
+        <style>吊带连衣裙</style>
+        <color>灰色</color>
+        <size>L</size>
+        <num>46</num>
+        <price>265.00</price>
+        <description>夏季新款韩版女装吊带两件套纱裙中长款优雅连衣裙气质仙女裙长裙</description>
+    </clothes>
+    <clothes id="A008">
+        <brand>拉夏贝尔</brand>
+        <style>吊带连衣裙</style>
+        <color>红白色</color>
+        <size>S</size>
+        <num>26</num>
+        <price>229.00</price>
+        <description>雪纺红色波点吊带连衣裙2019新款女装中长款仙女裙子夏蛋糕裙学生</description>
+    </clothes>
+    <clothes id="A009">
+        <brand>百衣树</brand>
+        <style>吊带连衣裙</style>
+        <color>灰白色</color>
+        <size>M</size>
+        <num>59</num>
+        <price>129.00</price>
+        <description>2019新款夏装夏季中长款宽松条纹短袖吊带连衣裙假两件洋气裙子女</description>
+    </clothes>
+    <clothes id="A0010">
+        <brand>希颖</brand>
+        <style>吊带连衣裙</style>
+        <color>天蓝色</color>
+        <size>L</size>
+        <num>86</num>
+        <price>138.00</price>
+        <description>背带牛仔裙短款2019新款夏季小个子高腰吊带短裙两件套时尚连衣裙</description>
+    </clothes>
+</list>
