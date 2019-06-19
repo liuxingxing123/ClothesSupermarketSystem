@@ -10,6 +10,10 @@ import com.vince.utils.BussinessException;
  * @date 2019-06-17 22:06
  */
 public class LoginClass extends BaseClass {
+    private UserService userService;
+    public LoginClass() {
+        userService = (UserService) beanFactory.getBean("userService");
+    }
 
     public void login() throws BussinessException {
         println(getString("input.username"));
@@ -17,7 +21,7 @@ public class LoginClass extends BaseClass {
         println(getString("input.password"));
         String password = input.nextLine();
 
-        UserService userService = new UserServiceImpl();
+        //UserService userService = new UserServiceImpl();
         User user = userService.login(username, password);
         if(user!=null){
             currUser = user;

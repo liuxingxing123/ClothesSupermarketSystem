@@ -20,8 +20,13 @@ import java.util.List;
  * @date 2019-06-18 14:00
  */
 public class HomeClass extends BaseClass {
-    private OrderService orderService = new OrderServiceImpl();
-    private ClothesService clothesService = new ClothesServiceImpl();
+    private OrderService orderService;
+    private ClothesService clothesService;
+
+    public HomeClass() {
+        orderService = ((OrderService) beanFactory.getBean("orderService"));
+        clothesService = ((ClothesService) beanFactory.getBean("clothesService"));
+    }
 
     public void show(){
         ShowProducts();
@@ -57,6 +62,7 @@ public class HomeClass extends BaseClass {
                     break;
                 case "0"://退出
                     flag = false;
+                    println(getString("info.exit"));
                     System.exit(0);
                     break;
                 default:
